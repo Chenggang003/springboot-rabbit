@@ -1,0 +1,18 @@
+spring:
+  rabbitmq:
+    host: 192.168.44.133
+    port: 5672
+    username: admin
+    password: 123456
+    virtual-host: /virtual_admin
+    listener:
+      simple:
+        retry:
+          ####开启消费者（程序出现异常的情况下会）进行重试
+          enabled: true
+          ####最大重试次数
+          max-attempts: 5
+          ####重试间隔次数
+          initial-interval: 3000
+        ####开启手动ack,解决消息重复消费（幂等性）问题
+        acknowledge-mode: manual

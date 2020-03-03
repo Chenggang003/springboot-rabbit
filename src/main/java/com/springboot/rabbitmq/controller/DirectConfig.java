@@ -1,4 +1,4 @@
-package com.springboot.rabbitmq.rabbitmq.controller;
+package com.springboot.rabbitmq.controller;
 
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.config.SimpleRabbitListenerContainerFactory;
